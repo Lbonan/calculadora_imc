@@ -1,10 +1,11 @@
 import { useState } from "react";
+import styles from "./Calculadora.module.css";
 
-const Calculadora = () => {
+const Calculadora = ({ mudaImc }) => {
   const [peso, setPeso] = useState("");
   const [altura, setAltura] = useState("");
 
-  const mostraResultado = () => {
+  const calculaImc = () => {
     let pesoNum = parseFloat(peso);
     let alturaNum = parseFloat(altura.replace(",", "."));
 
@@ -15,10 +16,19 @@ const Calculadora = () => {
     }
   };
 
+  const exibeResulado = () => {
+    const resultadoImc = calculaImc();
+    mudaImc(resultadoImc);
+    setPeso("");
+    setAltura("");
+  };
+
   return (
-    <form>
+    <form className="container">
+      <h1>Calculadora de IMC</h1>
       <input
         type="text"
+        className={styles.input}
         placeholder="Digite seu peso"
         value={peso}
         onChange={(ev) => {
@@ -27,13 +37,16 @@ const Calculadora = () => {
       />
       <input
         type="text"
+        className={styles.input}
         placeholder="Digite sua altura"
         value={altura}
         onChange={(ev) => {
           setAltura(ev.target.value);
         }}
       />
-      <p>IMC: {mostraResultado()}</p>
+      <button type="button" onClick={exibeResulado}>
+        Calcular
+      </button>
     </form>
   );
 };

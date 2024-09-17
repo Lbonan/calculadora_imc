@@ -1,0 +1,26 @@
+.h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.thead {
+  background-color: #000;
+  color: #fff;
+}
+
+.th {
+  padding: 18px;
+}
+
+.tbody {
+  background-color: #ececec;
+}
+
+.td {
+  padding: 1rem;
+}
