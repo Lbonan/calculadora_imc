@@ -24,3 +24,8 @@ p {
     font-size: 1rem;
   }
 }
+
+:root {
+  --corPrincipal: #00a8ff;
+  --corSecundaria: #fff;
+}

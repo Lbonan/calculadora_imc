@@ -1,36 +1,43 @@
 h1 {
   margin-top: 60px;
   padding: 1.4rem;
-  background-color: #00a8ff;
-  color: #fff;
+  background-color: var(--corPrincipal);
+  color: var(--corSecundaria);
 }
 
 .input {
   border: none;
-  border-bottom: 2px solid #00a8ff round;
-  border: 1px solid #00a8ff;
+  border-bottom: 2px solid var(--corPrincipal);
+  border: 1px solid var(--corPrincipal);
   margin-right: 1.5rem;
   margin-top: 20px;
   padding: 8px;
 }
 
+.input:focus {
+  border-color: var(--corPrincipal);
+  outline: none;
+}
+
 .input:hover {
-  box-shadow: 0px 0px 16px #00a8ff;
+  box-shadow: 0px 0px 16px var(--corPrincipal);
 }
 
 .button {
   padding: 8px;
-  border: 1px solid #00a8ff;
-  background-color: #00a8ff;
+  border: 1px solid var(--corPrincipal);
+  background-color: var(--corPrincipal);
   border-radius: 8px;
-  color: #fff;
+  color: var(--corSecundaria);
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s ease, 0.3s ease, 0.2s ease;
 }
 
 .button:hover {
   background-color: transparent;
-  color: #00a8ff;
+  color: var(--corPrincipal);
+  transform: scale(1.05);
 }
 
 @media (max-width: 640px) {

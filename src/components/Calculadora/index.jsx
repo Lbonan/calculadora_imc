@@ -19,8 +19,6 @@ const Calculadora = ({ mudaImc }) => {
   const exibeResulado = () => {
     const resultadoImc = calculaImc();
     mudaImc(resultadoImc);
-    setPeso("");
-    setAltura("");
   };
 
   return (
