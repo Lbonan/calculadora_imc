@@ -44,7 +44,7 @@ const Calculadora = ({ mudaImc }) => {
           setAltura(ev.target.value);
         }}
       />
-      <button type="button" onClick={exibeResulado}>
+      <button type="button" className={styles.button} onClick={exibeResulado}>
         Calcular
       </button>
     </form>
