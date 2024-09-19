@@ -26,7 +26,8 @@
 }
 
 .destacaCampo {
-  background-color: #82cdf3;
+  background-color: var(--corPrincipal);
+  color: var(--corSecundaria);
   font-weight: bold;
 }
 
